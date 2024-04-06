@@ -1,3 +1,3 @@
-# Portifólio Desenvolvimento Web 💻🗂️
+# Portifólio Front-end 💻🗂️
 
-Repositório dos meus projetos de desenvolvimento web, tanto do front-end com react e typescript, como no back-end com java e spring-boot!
+Repositório dos meus projetos de desenvolvimento web, desde a base até as tecnologias mais utilizadas no mercado!
