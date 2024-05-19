@@ -1,0 +1,14 @@
+{
+  "name": "first-crud-nodejs",
+  "version": "1.0.0",
+  "description": "Primeiro crud utilizando nodejs e mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sérgio Cerqueira",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
