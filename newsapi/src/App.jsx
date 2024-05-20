@@ -22,6 +22,7 @@ function App() {
       setIsLoading(false); 
     });
   }, [country]);
+  
   return (
     <>
     <div>
