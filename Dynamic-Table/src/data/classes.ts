@@ -1,4 +1,4 @@
-interface Column  {
+interface Column {
   name: string;
   label: string;
 }
@@ -8,13 +8,12 @@ export interface TableRenderizable {
 }
 
 export class User implements TableRenderizable {
+  name: string;
+  email: string;
+  age: number;
+  altura: number;
 
-  name: string
-  email: string
-  age: number
-  altura: number
-
-  constructor(props: User) {
+  constructor (props: User) {
     this.name = props.name;
     this.age = props.age;
     this.altura = props.altura;
@@ -23,52 +22,55 @@ export class User implements TableRenderizable {
 
   getTableColumnsProperties(): Column[] {
     return [
-      { name: 'name', label: 'Nome' },
-      { name: 'email', label: 'Email'},
-      { name: 'age', label: 'Idade' },
-      { name: 'altura', label: 'Altura' },
+      { name: "name", label: "Nome" },
+      { name: "email", label: "Email" },
+      { name: "age", label: "Idade" },
+      { name: "altura", label: "Altura" },
     ];
   }
 }
 
 export class Product implements TableRenderizable {
-
   name: string;
   price: number;
+  formattedPrice: string;
   qtd_estoque: number;
 
   constructor(props: Product) {
     this.name = props.name;
     this.price = props.price;
     this.qtd_estoque = props.qtd_estoque;
+    this.formattedPrice = props.price.toLocaleString("pt-br", {
+      style: "currency",
+      currency: "BRL",
+    });
   }
 
   getTableColumnsProperties(): Column[] {
     return [
-      { name: 'name', label: 'Nome' },
-      { name: 'price', label: 'Preço' },
-      { name: "qtd_estoque", label: "Qtd. Estoque"}
+      { name: "name", label: "Nome" },
+      { name: "formattedPrice", label: "Preço" },
+      { name: "qtd_estoque", label: "Qtd. Estoque" },
     ];
   }
 }
 
 export class Carro implements TableRenderizable {
-  
-  public marca: string
-  public modelo: string
-  public ano: number
+  public marca: string;
+  public modelo: string;
+  public ano: number;
 
   constructor(props: Carro) {
     this.marca = props.marca;
     this.modelo = props.modelo;
     this.ano = props.ano;
   }
-  
+
   getTableColumnsProperties(): Column[] {
     return [
-      { name: 'modelo', label: 'Modelo' },
-      { name: 'marca', label: 'Marca' },
-      { name: 'ano', label: 'Ano' },
+      { name: "modelo", label: "Modelo" },
+      { name: "marca", label: "Marca" },
+      { name: "ano", label: "Ano" },
     ];
   }
 }
