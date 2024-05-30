@@ -4,6 +4,7 @@ import { products } from './data/products'
 import { users } from './data/users'
 import { Carro, Product, User } from './data/classes'
 import { DynamicTable } from './components/DynamicTable'
+import './index.css'
 
 export const App = () => {
   
@@ -13,9 +14,12 @@ export const App = () => {
 
   return (
     <>
-      <DynamicTable renderContext={carros}/>
-      <DynamicTable renderContext={produtos}/>
-      <DynamicTable renderContext={usuarios}/>
+    <h1>Tabelas Dinâmicas</h1>
+      <div className='main-div-tables'>
+        <DynamicTable renderContext={produtos}/>
+        <DynamicTable renderContext={carros}/>
+        <DynamicTable renderContext={usuarios}/>
+      </div>
     </>
   )
 }

@@ -47,7 +47,7 @@ export class Product implements TableRenderizable {
     return [
       { name: 'name', label: 'Nome' },
       { name: 'price', label: 'Preço' },
-      { name: "qtd_estoque", label: "Qtd. em estoque"}
+      { name: "qtd_estoque", label: "Qtd. Estoque"}
     ];
   }
 }
